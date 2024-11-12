@@ -111,7 +111,6 @@ export default {
         .then(data => { this.artists = data; });
     },
     addSong() {
-
       this.newSong = {
     title: 'Test Song',
     artistId: 1, // Make sure artist with ID 1 exists
