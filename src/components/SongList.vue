@@ -51,7 +51,7 @@
         <input v-model="editSongData.title" placeholder="Title" required />
         
         <select v-model="editSongData.artist" required>
-          <option v-for="artist in artists" :key="artist.id" :value="artist.id">
+          <option v-for="artist in artists" :key="artist.id" :value="artist">
             {{ artist.name }}
           </option>
         </select>
@@ -181,7 +181,7 @@ export default {
     // Einen Song bearbeiten
     editSong(song) {
         this.isEditing = true;
-        this.editSongData = { ...song, artist: song.artist.id };
+        this.editSongData = song // { ...song, artistId: song.artist.id };
     },
 //beim edit ist das Problem, dass es nach einem submit edit nicht das richtige speichert - iwas mitn artist vermute ich mal
     // Einen Song aktualisieren
