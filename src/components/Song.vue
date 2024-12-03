@@ -1,7 +1,8 @@
 <template>
   <div class="song-card">
     <h2 class="song-title">{{ song.title }}</h2>
-    <p class="song-artist">Artist: <strong>{{ song.artist }}</strong></p>
+    <!-- Zeige nur den Namen des Künstlers -->
+    <p class="song-artist">Artist: <strong>{{ song.artist.name }}</strong></p>
     <p class="song-genre">Genre: <strong>{{ song.genre }}</strong></p>
     <p class="song-length">Length: <strong>{{ formatLength(song.length) }}</strong></p>
     <button @click="editSong" class="edit-button">Edit</button>
